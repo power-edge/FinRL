@@ -4,36 +4,37 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-alpaca-trade-api = ">=2.1.0"
-ccxt = ">=1.66.32"
+alpaca-trade-api = "*"
+ccxt = "*"
 elegantrl = "*"
-exchange-calendars = "==3.6.3"
+exchange-calendars = "*"
 gputil = "*"
 gymnasium = "*"
-importlib-metadata = "==4.13.0"
+importlib-metadata = "*"
 jqdatasdk = "*"
 lz4 = "*"
 matplotlib = "*"
-numpy = ">=1.17.3"
-pandas = ">=1.1.5"
+numpy = "*"
+pandas = "*"
 pre-commit = "*"
 pyfolio = "*"
 pytest = "*"
-ray = {extras = ["tune"], version = "*"}
+ray = {extras = ["tune"] }
 recommonmark = "*"
-scikit-learn = ">=0.21.0"
+scikit-learn = "*"
 sphinx = "*"
 sphinx-rtd-theme = "*"
 sqlalchemy = "*"
-stable-baselines3 = {extras = ["extra"], version = "*"}
-stockstats = ">=0.4.0"
+stable-baselines3 = {extras = ["extra"] }
+stockstats = "*"
 swig = "*"
 tensorboardx = "*"
 wrds = "*"
 yfinance = "*"
+finrl = {file = "."}
 
 [dev-packages]
 jupyterlab = "*"
 
 [requires]
-python_version = "3.10"
+python_version = "3.9"
