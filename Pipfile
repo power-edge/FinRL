@@ -30,8 +30,8 @@ stockstats = "*"
 swig = "*"
 tensorboardx = "*"
 wrds = "*"
-yfinance = "*"
 finrl = {file = "."}
+yfinance = {ref = "dev", git = "git+ssh://git@github.com/power-edge/yfinance.git"}
 
 [dev-packages]
 jupyterlab = "*"
