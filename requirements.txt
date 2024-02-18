@@ -48,7 +48,11 @@ sphinx_rtd_theme
 
 
 SQLAlchemy
-stable-baselines3[extra]
+
+#stable-baselines3[extra]
+
+stable-baselines3[extra]@git+ssh://git@github.com/power-edge/stable-baselines3.git@dev
+
 stockstats>=0.4.0
 swig
 
@@ -60,3 +64,4 @@ wrds
 # market data & paper trading API
 # yfinance
 yfinance@git+ssh://git@github.com/power-edge/yfinance.git@dev
+
