@@ -243,12 +243,6 @@ class StockTradingEnv(gym.Env):
             df_total_value["daily_return"] = df_total_value["account_value"].pct_change(
                 1
             )
-            if df_total_value["daily_return"].std() != 0:
-                sharpe = (
-                    (252**0.5)
-                    * df_total_value["daily_return"].mean()
-                    / df_total_value["daily_return"].std()
-                )
             df_rewards = pd.DataFrame(self.rewards_memory)
             df_rewards.columns = ["account_rewards"]
             df_rewards["date"] = self.date_memory[:-1]
@@ -260,6 +254,11 @@ class StockTradingEnv(gym.Env):
                 print(f"total_cost: {self.cost:0.2f}")
                 print(f"total_trades: {self.trades}")
                 if df_total_value["daily_return"].std() != 0:
+                    sharpe = (
+                            (252 ** 0.5)
+                            * df_total_value["daily_return"].mean()
+                            / df_total_value["daily_return"].std()
+                    )
                     print(f"Sharpe: {sharpe:0.3f}")
                 print("=================================")
 

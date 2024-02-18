@@ -136,7 +136,9 @@ dmypy.json
 
 # Editors
 .idea
+.idea/*
 .vscode
+.vscode/*
 
 
 *events.out.tfevents.*
